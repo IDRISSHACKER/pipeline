@@ -1,0 +1,27 @@
+{
+  "name": "test-unit",
+  "version": "1.0.0",
+  "description": "learn to create the unit test",
+  "main": "sum.js",
+  "scripts": {
+    "test": "jest --watchAll --verbose"
+  },
+  "repository": "git+https://github.com/IDRISSHACKER/test-unit.git",
+  "keywords": [
+    "test",
+    "jest",
+    "unit"
+  ],
+  "author": "IDRISSCODER",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IDRISSHACKER/test-unit/issues"
+  },
+  "homepage": "https://github.com/IDRISSHACKER/test-unit#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
