@@ -1,7 +1,7 @@
 {
   "name": "test-unit",
-  "version": "1.0.0",
-  "description": "learn to create the unit test",
+  "version": "1.0.1",
+  "description": "learn to create the unit test with Test Driven Development aproch",
   "main": "./src/interval.js",
   "type": "module",
   "scripts": {
