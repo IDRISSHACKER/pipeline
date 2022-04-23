@@ -2,7 +2,8 @@
   "name": "test-unit",
   "version": "1.0.0",
   "description": "learn to create the unit test",
-  "main": "sum.js",
+  "main": "./src/interval.js",
+  "type": "module",
   "scripts": {
     "test": "jest --watchAll --verbose"
   },

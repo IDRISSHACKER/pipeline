@@ -1,4 +1,4 @@
-const intervalToObj = require("../src/interval")
+const intervalToObj  = require("../src/interval")
 
 test("shold return object for 0 second", ()=>{
 
