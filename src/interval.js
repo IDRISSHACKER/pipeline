@@ -23,7 +23,7 @@ module.exports = function intervalToObj (ms) {
         ms -= timer[key] * times[key]
     })
 
-    timer.seconds = Math.round(ms / 1000)
+    timer.seconds = Math.round(ms / SECOND)
 
     return timer
 }
