@@ -1,0 +1,44 @@
+ version: '3.7'
+
+ services:
+  app:
+    env_file:
+      - .env
+    container_name: 'UNIT-TESTING-${MODE}'
+    build: 
+      context: .
+      target: '${MODE}'
+    volumes: 
+      - .:/app
+    command: /bin/sh -c 'npm install && npm run test'
+  server:
+    image: nginx
+    env_file:
+      - .env
+    container_name: 'SERVER-WEB-${MODE}'
+    ports:
+      - 9090:80
+    volumes:
+      - ./src:/usr/share/nginx/html
+    command: [nginx-debug, '-g', 'daemon off;']
+  db:
+    env_file:
+      - .env
+    container_name: 'DB-${MODE}'
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+    ports:
+      - 3306:3306
+  adminer:
+    env_file:
+      - .env
+    container_name: 'DBADMIN-${MODE}'
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+    
+  
