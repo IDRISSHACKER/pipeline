@@ -1,0 +1,13 @@
+--- 
+- hosts: localhost
+  tasks:
+
+  - name: Run nginx container
+    docker_container:
+      name: 'nginx'
+      recreate: true
+      image: 'nginx'
+      published_ports:
+        - "80:80"
+      volumes:
+        - './src:/usr/share/nginx/html'   
